@@ -420,8 +420,6 @@ section{
     text-transform: none;
     background:none;
 }
-
-
 .footer {
     background-color: #ffffff;
     padding: 20px;
@@ -467,18 +465,7 @@ section{
   .nav-footer li a:hover {
     color: #0000FF;
   }
-  
-
-
-
-
-
-
-
-
-
-
-
+    
 
 /* media queries  */
 @media (max-width:991px){
