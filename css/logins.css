@@ -19,9 +19,7 @@ body *{
 .main-login{
 	width: 100vw;
 	height: 100vh;
-	background-image: url(../images/ha_black.jpg);
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background-color: #363636;
 	display: flex;
 	justify-content: center;
 	align-items: center ;

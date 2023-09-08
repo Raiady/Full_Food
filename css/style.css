@@ -18,9 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/ha_black.jpg);
-  background-repeat: no-repeat;
-	background-size: 100%;
+ background-color: #363636;
 }
 
 .card {
@@ -74,7 +72,7 @@ body {
   color: #DAA520;
 }
 .btn-login{
-	width: 50%;
+	width: 80%;
 	padding: 16px 0px;
 	margin: 20px;
 	border:none;
