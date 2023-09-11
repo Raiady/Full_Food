@@ -61,6 +61,7 @@ body{
     list-style-type: none;
 }
 .nav-menu ul li .link{
+    opacity: 0.1;
     text-decoration: none;
     font-weight: 500;
     color: #fff;
@@ -68,7 +69,7 @@ body{
     margin: 0 25px;
 }
 .link:hover, .active{
-    border-bottom: 2px solid #fff;
+   color: #ff5e00;
 }
 .nav-button .btn{
     width: 130px;
@@ -202,7 +203,6 @@ header{
 }
 .two-col .one{
     display: flex;
-    gap: 5px;
 }
 .two label a{
     text-decoration: none;

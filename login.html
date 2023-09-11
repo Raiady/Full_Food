@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/login_signup.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Ludiflex | Login & Registration</title>
+    <title>Login & Cadastro</title>
 </head>
 <body>
  <div class="wrapper">
@@ -15,19 +15,11 @@
         <div class="nav-logo">
             <a href="index.html"><i class='bx bx-left-arrow-alt'></i></a>
         </div>
-         <div class="nav-menu" id="navMenu">
-            <ul>
-                <li><a href="#" class="link active"><button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button></a></li>
-                <li><a href="#" class="link"><button class="btn" id="registerBtn" onclick="register()">Sign Up</button></a></li>
-            </ul>
-        </div>
         <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Entrar</button>
+            <button class="btn" id="registerBtn" onclick="register()">Inscrever-se</button>
         </div>
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-        </div>
+        
     </nav>
 <!----------------------------- Form box ----------------------------------->    
     <div class="form-box">
@@ -50,12 +42,9 @@
                 <input type="submit" class="submit" value="Entre">
             </div>
             <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="login-check">
-                    <label for="login-check">Lembre-se</label>
-                </div>
+
                 <div class="two">
-                    <label><a href="#">Forgot password?</a></label>
+                    <label><a href="#">Esqueceu sua senha?</a></label>
                 </div>
             </div>
         </div>
@@ -89,10 +78,10 @@
                 <input type="password" class="input-field" placeholder="Senha">
                 <i class="bx bx-lock-alt"></i>
             </div>
-            <div class="input-box">
-                <label for="user-type">Select User Type:</label>
+            <div class="input-box" style="color: aliceblue;">
+                <label for="user-type">Selecione o tipo de usuário:</label>
                 <select id="user-type" class="input-field" style="color: black;">
-                  <option value="common">Common User</option>
+                  <option value="common">Usuário comum</option>
                   <option value="admin">Administrator</option>
                 </select>
               </div>
@@ -101,12 +90,9 @@
                 <input type="submit" class="submit" value="Register">
             </div>
             <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <label for="register-check"> Remember Me</label>
-                </div>
                 <div class="two">
-                    <label><a href="#">Terms & conditions</a></label>
+                    <input type="checkbox" id="register-check">
+                    <label><a href="#">Termos & Condições</a></label>
                 </div>
             </div>
         </div>
