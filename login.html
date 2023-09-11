@@ -1,43 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Raiady França">
-	<link rel="stylesheet" type="text/css" href="css/logins.css">
-	<title>Login</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login_signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Ludiflex | Login & Registration</title>
 </head>
-	<body>
-		<div class="main-login">
-			<div class="back-button">
-				<a href="index.html" onclick="history.back(); return false;">
-					<div class="fas fa-arrow-left" id="fa-arrow-left" style="color: aliceblue;"></div>
-				</a>
-			</div>
-			<div class="login-img">
-				<h1>Faça Login<br>E Seja Bem Vindo!!!</h1>
-				<img src="images/hamburger-animate.svg" class="login-imagem" alt="robo" >
-			</div>
-			<div class="login-cadast">
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <a href="index.html"><i class='bx bx-left-arrow-alt'></i></a>
+        </div>
+         <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active"><button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button></a></li>
+                <li><a href="#" class="link"><button class="btn" id="registerBtn" onclick="register()">Sign Up</button></a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
 
-				<div class="Card-login">
+        <div class="login-container" id="login">
+            <div class="top">
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Usuario ou Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Senha">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Entre">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check">Lembre-se</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
 
-					<h1>Login</h1>
-					<div class="textfield">
-						<label for="user">Usuario</label>
-						<input type="text" name="Usuario" placeholder="Usuario">
-					</div>
-					<div class="textfield">
-						<label for="senha">Senha</label>
-						<input type="password" name="Senha" placeholder="senha">
-					</div>
-					<button class="btn-login">Login</button>
-					<a class="txt2" href="Cadastro.html">
-Ainda não Possui conta ? cadastra-se !!!
-</a>
-				</div>
-			</div>
-		</div>
-	</body>
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <header>Cadastro</header>
+            </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nome">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" oninput="mascara(this)" name="cpf" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" maxlength="14" placeholder="000.000.000-00"/>
+                    <i class='bx bx-credit-card-front'></i>
+                </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" class="input-field"  oninput="masc(this)" name="telefone" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" maxlength="11" placeholder="(00) 0000-0000">
+                <i class='bx bx-phone-call'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="Endereco" placeholder="Endereco">
+                <i class='bx bx-map'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Senha">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <label for="user-type">Select User Type:</label>
+                <select id="user-type" class="input-field" style="color: black;">
+                  <option value="common">Common User</option>
+                  <option value="admin">Administrator</option>
+                </select>
+              </div>
+              <br>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+<script>
+   
+  
+</script>
+<script src="js/app.js"></script>
+</body>
 </html>
