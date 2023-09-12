@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url(../images/ha_black.png)
+  background: url(/images/ha_black.png)
     top center / cover no-repeat;
   display: flex;
   justify-content: center;
