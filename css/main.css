@@ -284,6 +284,9 @@ section{
     height: 10rem;
     border-radius: 10%;
 }
+.menu .box-container .box span{
+    font-size: 20px;
+}
 
 .menu .box-container .box h3{
     color: #fff;
