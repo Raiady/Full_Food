@@ -167,6 +167,7 @@ input {
   padding: 12px 0px;
   margin: 5px 0;
   width: 80%;
+  outline:none;
 }
 
 .container {
