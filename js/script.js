@@ -46,7 +46,7 @@ window.onscroll = () =>{
                     cartItem.classList.add('cart-item');
                     cartItem.innerHTML = `
                         <span class="fas fa-times" onclick="removerItem('${item.nome}')"></span>
-                        <img src="images/${item.nome}.png" alt="${item.nome}"> <!-- Adiciona a imagem do produto -->
+                        <img src="../images/${item.nome}.svg" alt="${item.nome}"> <!-- Adiciona a imagem do produto -->
                         <div class="content">
                             <h3>${item.nome}</h3>
                             <div class="price">$${item.preco.toFixed(2)}/-</div>
