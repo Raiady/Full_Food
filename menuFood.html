@@ -1,4 +1,130 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" />]
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <title>Full Food</title>
+	<link rel="stylesheet" href="css/men.css">
+</head>
+<body>
+    <!-- modelos de pizza na lista e no carrinho -->
+    <div class="models">
+		
+        <!-- pizza na lista -->
+        <div class="lanche-item">
+			
+            <a href="">
+                <div class="lanche-item--img"><img src="" /></div>
+                <div class="lanche-item--add">+</div>
+            </a>
+            <div class="lanche-item--price">R$ --</div>
+            <div class="lanche-item--name">--</div>
+            <div class="lanche-item--desc">--</div>
+        </div>
+
+        <!-- pizza no carrinho -->
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /models -->
+
+    <!-- .menu-open aparecera no modo mobile -->
+    <header>
+        <h1><a href="#">
+            <img src="images/favicon.ico" alt="">
+        </a></h1>
+        <div class="menu-open"><span>0</span>🛒</div>
+    </header>
+    <!-- /menu-open -->
+
+    <!-- conteudo principal -->
+    <main>
+		<h1 class="titl"><span>menu</span> </h1>
+		<h2 class="titl"><p>Os Melhores Lanche e Bebidas</p> </h2>
+        <div class="menu-area"></div>
+		
+    </main>
+    <!-- /conteudo principal -->
+
+    <!-- aside do carrinho -->
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Seu Pedido</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <!-- /aside do carrinho -->
+
+    <!-- janela modal .menuWindowArea -->
+    <div class="menuWindowArea">
+        <div class="menuWindowBody">
+            <div class="Descricao--cancelMobileButton">Voltar</div>
+            <div class="lancheBig">
+                <img src="" />
+            </div>
+            <div class="Descricao">
+                <h1>--</h1>
+                <div class="Descricao--desc">--</div>
+                <div class="Descricao--sizearea">
+                    <div class="Descricao--sector">Tamanho</div>
+                    <div class="Descricao--sizes">
+                        <div data-key="P" class="Descricao--size">PEQUENA <span>--</span></div>
+                        <div data-key="M" class="Descricao--size">MÉDIA <span>--</span></div>
+                        <div data-key="G" class="Descricao--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="Descricao--pricearea">
+                    <div class="Descricao--sector">Preço</div>
+                    <div class="Descricao--price">
+                        <div class="Descricao--actualPrice">R$ --</div>
+                        <div class="Descricao--qtarea">
+                            <button class="Descricao--qtmenos">-</button>
+                            <div class="Descricao--qt">1</div>
+                            <button class="Descricao--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Descricao--addButton">Adicionar ao carrinho</div>
+                <div class="Descricao--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <!-- /janela modal .menuWindowArea -->
+
+    <script src="js/menu.js"></script>
+    <script src="js/men.js"></script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -6,8 +132,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    font awesome cdn link  -->
+ <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<title>Document</title>
 </head>
@@ -171,4 +297,4 @@
 	</section>
 <script src="js/script.js"></script>
 </body>
-</html>
+</html>-->

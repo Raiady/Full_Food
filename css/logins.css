@@ -98,7 +98,7 @@ button {
   font-size: 15px;
   font-weight: 700;
   margin: 20px;
-  padding: 11px 50px;
+  padding: 11px 68px;
   letter-spacing: 1px;
   text-transform: capitalize;
   transition: 0.3s ease-in-out;
@@ -385,11 +385,14 @@ input {
     user-select: none;
     padding: 5px;
   }
+  button{
+    padding: 11px 54px;
+  }
   button.ghost {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #fff;
     color: #fff;
-    padding: 2px 49px;
+    padding: 2px 40px;
   }
   .form{
     padding:0 30px 30;
