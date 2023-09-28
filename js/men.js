@@ -333,6 +333,93 @@ foodJson.map((item, index ) => {
     botoesFechar()
 
 }) // fim do MAPEAR foodJson para gerar lista de lanches
+// Função para abrir o modal
+// ...
+
+document.addEventListener("DOMContentLoaded", function () {
+    const finalizarCompraButton = document.querySelector(".cart--finalizar");
+    const paymentModal = document.getElementById("paymentModal");
+    const orderSummaryModal = document.getElementById("orderSummaryModal");
+    const creditCardButton = document.getElementById("creditCardButton");
+    const confirmOrderButton = document.getElementById("confirmOrderButton");
+    const closeButtons = document.querySelectorAll(".close");
+
+    // Função para abrir o modal de pagamento
+    finalizarCompraButton.addEventListener("click", function () {
+        paymentModal.style.display = "block";
+    });
+
+    // Função para fechar qualquer modal
+    closeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            paymentModal.style.display = "none";
+            orderSummaryModal.style.display = "none";
+        });
+    });
+
+    // Função para abrir o modal de resumo do pedido
+    function processPaymentAndDisplaySummary() {
+        paymentModal.style.display = "none"; // Fecha o modal de pagamento
+        orderSummaryModal.style.display = "block"; // Abre o modal de resumo do pedido
+    
+        // Itere sobre os itens no carrinho e calcule subtotal
+        let itemsHTML = ""; // String para armazenar os itens do carrinho
+        let subtotal = 0; // Variável para armazenar o subtotal
+    
+        for (const item of cart) {
+            const lancheItem = foodJson.find((foodItem) => foodItem.id == item.id);
+            const itemName = `${lancheItem.name} (${lancheItem.sizes[item.size]})`;
+            const itemPrice = formatoReal(item.price * item.qt);
+    
+            // Adicione o item à string de itens do carrinho
+            itemsHTML += `
+                <div class="cart-item-name">${itemName}</div>
+                <div class="cart-item-quantity">${item.qt}</div>
+                <div class="cart-item-price">${itemPrice}</div>
+            `;
+    
+            // Atualize o subtotal
+            subtotal += item.price * item.qt;
+        }
+    
+        // Defina o valor do desconto, se aplicável
+        const desconto = 0; // Substitua 0 pelo valor real do desconto
+    
+        // Calcule o total
+        const total = subtotal - desconto;
+    
+        // Atualize o conteúdo do resumo do pedido
+        const orderSummaryContent = document.querySelector(".order-summary");
+        orderSummaryContent.innerHTML = `
+            <p>Itens no carrinho:</p>
+            ${itemsHTML}
+            <p>Subtotal: R$ ${formatoReal(subtotal)}</p>
+            <p>Desconto: R$ ${formatoReal(desconto)}</p>
+            <p>Total: R$ ${formatoReal(total)}</p>
+        `;
+    }
+    document.getElementById("creditCardButton").addEventListener("click", function () {
+        processPaymentAndDisplaySummary(); // Chame a função quando o botão de cartão de crédito for clicado
+    });
+    
+    document.getElementById("debitCardButton").addEventListener("click", function () {
+        processPaymentAndDisplaySummary(); // Chame a função quando o botão de cartão de débito for clicado
+    });
+    
+    document.getElementById("cashButton").addEventListener("click", function () {
+        processPaymentAndDisplaySummary(); // Chame a função quando o botão de dinheiro for clicado
+    });
+    // Agora você pode chamar a função processPaymentAndDisplaySummary() sempre que precisar realizar esse processamento
+    
+    
+
+    // Função para confirmar o pedido (enviar para o banco, etc.)
+    confirmOrderButton.addEventListener("click", function () {
+        // Coloque o código para enviar o pedido para o banco de dados aqui
+        alert("Pedido confirmado! Obrigado por sua compra.");
+    });
+});
+
 
 
 // mudar quantidade com os botoes + e -

@@ -59,29 +59,66 @@
     <!-- /conteudo principal -->
 
     <!-- aside do carrinho -->
-    <aside>
-        <div class="cart--area">
-            <div class="menu-closer">❌</div>
-            <h1>Seu Pedido</h1>
-            <div class="cart"></div>
-            <div class="cart--details">
-                <div class="cart--totalitem subtotal">
-                    <span>Subtotal</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart--totalitem desconto">
-                    <span>Desconto</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart--totalitem total big">
-                    <span>Total</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart--finalizar">Finalizar a compra</div>
-            </div>
-        </div>
-    </aside>
-    <!-- /aside do carrinho -->
+	<aside>
+		<div class="cart--area">
+			<div class="menu-closer">❌</div>
+			<h1>Seu Pedido</h1>
+			<div class="cart"></div>
+			<div class="cart--details">
+				<div class="cart--totalitem subtotal">
+					<span>Subtotal</span>
+					<span>R$ --</span>
+				</div>
+				<div class="cart--totalitem desconto">
+					<span>Desconto</span>
+					<span>R$ --</span>
+				</div>
+				<div class="cart--totalitem total big">
+					<span>Total</span>
+					<span>R$ --</span>
+				</div>
+				<div class="cart--finalizar">Finalizar a compra</div>
+			</div>
+		</div>
+	</aside>
+	
+	<div id="paymentModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Escolha a forma de pagamento</h2>
+			<button id="creditCardButton">Cartão de Crédito</button>
+			<button id="debitCardButton">Cartão de Débito</button>
+			<button id="cashButton">Dinheiro</button>
+		</div>
+	</div>
+	
+	
+	<div id="orderSummaryModal" class="modal">
+		<div class="modal-content">
+			<h2>Resumo do Pedido</h2>
+			<div class="order-summary">
+				<!-- Conteúdo do resumo do pedido será preenchido com JavaScript -->
+			</div>
+			<button id="confirmOrderButton">Confirmar Pedido</button>
+		</div>
+	</div>
+	
+	<!-- Adicione aqui o resumoModal -->
+	<div id="resumoModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Resumo do Carrinho</h2>
+			<div id="resumoContent" class="resumo-content">
+				<!-- Os itens do carrinho serão preenchidos dinamicamente aqui -->
+			</div>
+			<div id="resumoTotal" class="resumo-total">
+				<!-- O subtotal, desconto e total serão preenchidos dinamicamente aqui -->
+			</div>
+			<button id="finalizarButton" class="finalizar-button">Finalizar Pedido</button>
+		</div>
+	</div>
+	
+
 
     <!-- janela modal .menuWindowArea -->
     <div class="menuWindowArea">
