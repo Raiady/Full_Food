@@ -332,7 +332,7 @@ foodJson.map((item, index ) => {
 
     botoesFechar()
 
-}) // fim do MAPEAR foodJson para gerar lista de pizzas
+}) // fim do MAPEAR foodJson para gerar lista de lanches
 
 
 // mudar quantidade com os botoes + e -

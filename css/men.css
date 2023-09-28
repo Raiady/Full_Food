@@ -45,6 +45,11 @@ html::-webkit-scrollbar-thumb{
 
 body {
     background:url(../images/ha_black.png) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+  height: 100vh;
     font-family:'Lato', Helvetica, Arial;
     font-size:15px;
     display:flex;
