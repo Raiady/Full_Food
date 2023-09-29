@@ -155,7 +155,15 @@ aside {
     transition:all ease .2s;
     overflow-x:hidden;
 }
-
+.modal-content{
+    background-color:#caab86;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    transition:all ease .2s;
+}
+.order-summary{
+    width: 100%;
+  border-bottom: 1px solid #aa0404;
+}
 aside.show {
     width:25vw;
 }
